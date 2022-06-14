@@ -22,5 +22,40 @@ namespace Luffy
             //Assert
             Assert.AreEqual(9, result);
         }
+
+        [Test]
+        public void IsOddNumber_InputEvenNumber_ReturnFalse()
+        {
+            //arrange
+            Calculator cal = new();
+
+
+            //act
+            bool result = cal.IsOddNumber(4);
+            //assert
+
+            //Assert.AreEqual(false, result);
+            Assert.That(result, Is.EqualTo(false));
+            //Assert.IsFalse(result);
+
+
+        }
+        [Test]
+        public void IsOddNumber_InputOddNumber_ReturnTrue()
+        {
+            //arrange
+            Calculator cal = new();
+
+
+            //act
+            bool result = cal.IsOddNumber(3);
+            //assert
+
+            //Assert.AreEqual(true, result);
+            Assert.That(result, Is.EqualTo(true));
+            //Assert.IsTrue(result);
+
+
+        }
     }
 }

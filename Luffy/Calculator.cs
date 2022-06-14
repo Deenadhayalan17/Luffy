@@ -8,5 +8,19 @@ namespace Luffy
         {
             return a + b;
         }
+        public bool IsOddNumber(int a)
+        {
+            return a %2 != 0;
+            //if (a % 2 == 0)
+            //{ 
+            //    return true;
+            //}
+            //else
+            //{
+            //    return false;
+            //}
+        }
     }
+
+  
 }
