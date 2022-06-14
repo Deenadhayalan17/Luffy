@@ -60,5 +60,15 @@ namespace Luffy
 
 
         }
+        [Test]
+        [TestCase(10,ExpectedResult =false)]
+        [TestCase(17, ExpectedResult = true)]
+
+        public bool IsOddNumber_InoutNumber_ReturnTrueIfOdd(int a)
+        {
+            Calculator cal = new();
+            return cal.IsOddNumber(a);
+
+        }
     }
 }
