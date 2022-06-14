@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 namespace LuffyMSTest
 {
     [TestClass]
-    class CalculatorTests
+    public class CalculatorTests
     {
         [TestMethod]
         public void AddNumbers_InputTwoInt_GetCorrectAddition()
         {
             //Arrange
-
+             
             Calculator cal = new Calculator();
 
             //Act
