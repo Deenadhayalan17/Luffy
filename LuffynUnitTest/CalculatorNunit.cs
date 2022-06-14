@@ -1,17 +1,16 @@
-﻿using Luffy;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LuffyMSTest
+namespace Luffy
 {
-    [TestClass]
-    public class CalculatorTests
+    [TestFixture]
+    public class CalculatorNunit
     {
-        [TestMethod]
+        [Test]
         public void AddNumbers_InputTwoInt_GetCorrectAddition()
         {
             //Arrange             
