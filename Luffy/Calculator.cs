@@ -20,6 +20,10 @@ namespace Luffy
             //    return false;
             //}
         }
+        public double AddNumberdouble(double a, double b)
+        {
+            return a + b;
+        }
     }
 
   

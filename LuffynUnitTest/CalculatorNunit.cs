@@ -70,5 +70,19 @@ namespace Luffy
             return cal.IsOddNumber(a);
 
         }
+        // doubles we can provide range 
+        [Test]
+        [TestCase(15.5,1)]
+        public void AddNumbersDouble_InputTwoDouble_GetCorrectAddition(double a, double b)
+        {
+            //Arrange             
+            Calculator cal = new Calculator();
+
+            //Act
+            double result = cal.AddNumberdouble(a, b);
+
+            //Assert
+            Assert.AreEqual(16.6, result,.2);
+        }
     }
 }
