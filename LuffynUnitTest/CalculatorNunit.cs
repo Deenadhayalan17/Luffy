@@ -41,14 +41,17 @@ namespace Luffy
 
         }
         [Test]
-        public void IsOddNumber_InputOddNumber_ReturnTrue()
+        [TestCase(9)]
+        [TestCase(11)]// passing parameter more than one 
+
+        public void IsOddNumber_InputOddNumber_ReturnTrue(int a)
         {
             //arrange
             Calculator cal = new();
 
 
             //act
-            bool result = cal.IsOddNumber(3);
+            bool result = cal.IsOddNumber(a);
             //assert
 
             //Assert.AreEqual(true, result);
