@@ -10,11 +10,19 @@ namespace Luffy
     [TestFixture]
     public class CustomerNUnit
     {
+        private Customer customer { get; set; }
+
+        [SetUp]
+        public void Setup()
+        {
+            customer = new Customer();
+
+        }
         [Test]
         public void GreetAndJoinName_InputFirstNameAndLastName_returnFullName()
         {
             //Arrange
-            var customer = new Customer();
+            //var customer = new Customer();
             //Act
             string fullname =customer.GreetAndJoinName("Deena", "Dhayalan");
             //Assert
@@ -33,7 +41,7 @@ namespace Luffy
         public void GreetAndJoinName_nocall_ReturnNull()
         {
             //arrange
-            var customer = new Customer();
+            //var customer = new Customer();
 
             //act
 
