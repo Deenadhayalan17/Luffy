@@ -20,6 +20,14 @@ namespace Luffy
             //Assert
             Assert.That(fullname, Is.EqualTo("Hello, Deena Dhayalan"));
             Assert.AreEqual(fullname, "Hello, Deena Dhayalan");
+            Assert.That(fullname, Does.Contain(","));
+            Assert.That(fullname, Does.Contain("Deena Dhayalan"));//case sensitive 
+            Assert.That(fullname, Does.Contain("Deena dhayalan").IgnoreCase);//so we use ignore case
+            Assert.That(fullname, Does.StartWith("Hello,"));
+            Assert.That(fullname, Does.EndWith("Dhayalan"));
+            Assert.That(fullname, Does.Match("Hello, [A-Z]{1}[a-z]+ [A-Z]{1}[a-z]"));
+
+
 
         }
     }
