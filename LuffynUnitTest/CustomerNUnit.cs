@@ -27,8 +27,18 @@ namespace Luffy
             Assert.That(fullname, Does.EndWith("Dhayalan"));
             Assert.That(fullname, Does.Match("Hello, [A-Z]{1}[a-z]+ [A-Z]{1}[a-z]"));
 
+        }
+        [Test]
 
+        public void GreetAndJoinName_nocall_ReturnNull()
+        {
+            //arrange
+            var customer = new Customer();
 
+            //act
+
+            //assert
+            Assert.IsNull(customer.GreetMessage);
         }
     }
 }

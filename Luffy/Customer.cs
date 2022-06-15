@@ -2,10 +2,12 @@
 {
     public class Customer
     {
+        public string GreetMessage { get; set; }
 
         public string GreetAndJoinName(string FirstName,string SecondName)
         {
-            return $"Hello, {FirstName} {SecondName}";
+            GreetMessage= $"Hello, {FirstName} {SecondName}";
+            return GreetMessage;
         }
     }
 
