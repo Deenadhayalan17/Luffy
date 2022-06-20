@@ -48,5 +48,13 @@ namespace Luffy
             //assert
             Assert.IsNull(customer.GreetMessage);
         }
+
+        [Test]
+        public void DiscountCheck_DefaultCUstomer_ResturnDiscountInrange()
+        {
+            int output = customer.Discount;
+
+            Assert.That(output, Is.InRange(15, 25));
+        }
     }
 }
