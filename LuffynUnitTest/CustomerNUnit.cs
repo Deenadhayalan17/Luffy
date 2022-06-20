@@ -18,7 +18,7 @@ namespace Luffy
             customer = new Customer();
 
         }
-        [Test]
+        [Test] 
         public void GreetAndJoinName_InputFirstNameAndLastName_returnFullName()
         {
             //Arrange

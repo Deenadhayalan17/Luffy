@@ -84,5 +84,18 @@ namespace Luffy
             //Assert
             Assert.AreEqual(16.6, result,.2);
         }
+        [Test]
+        public void OddListInRange_InputMaxMin_RTeturnOddList()
+        {
+            //Arrange
+            Calculator cal = new Calculator();
+            List<int> expectedRange = new() {5,7,9};
+
+            //Act
+            List<int> output= cal.OddListInRange(5, 10);
+
+            //Assert
+            Assert.That(output, Is.EquivalentTo(expectedRange));
+        }
     }
 }
