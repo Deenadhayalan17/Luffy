@@ -59,5 +59,15 @@ namespace Luffy
 
             Assert.That(output, Is.InRange(15, 25));
         }
+        [Test]
+        public void GreetAndJoinName_EmptyFirstName_ThrowException()
+        {
+            var expectiondetails = Assert.Throws<ArgumentException>(
+                ()=> customer.GreetAndJoinName("","Ben"));
+            Assert.AreEqual("Empty First Name", expectiondetails.Message);
+
+            Assert.That(() =>customer.GreetAndJoinName("","Mass"),
+                Throws.ArgumentException.With.Message.EqualTo("Empty First Name"));
+        }
     }
 }

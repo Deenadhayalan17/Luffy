@@ -1,4 +1,6 @@
-﻿namespace Luffy
+﻿using System;
+
+namespace Luffy
 {
     public class Customer
     {
@@ -7,6 +9,10 @@
 
         public string GreetAndJoinName(string FirstName,string SecondName)
         {
+            if (string.IsNullOrEmpty(FirstName))
+            {
+                throw new ArgumentException("Empty First Name");
+            }
             GreetMessage= $"Hello, {FirstName} {SecondName}";
             Discount = 20;
             return GreetMessage;
