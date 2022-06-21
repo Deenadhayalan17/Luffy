@@ -68,6 +68,30 @@ namespace Luffy
 
             Assert.That(() =>customer.GreetAndJoinName("","Mass"),
                 Throws.ArgumentException.With.Message.EqualTo("Empty First Name"));
+
+            // check only exception 
+
+            Assert.Throws<ArgumentException>(
+                     () => customer.GreetAndJoinName("", "Ben"));
+
+            Assert.That(() => customer.GreetAndJoinName("", "Mass"),
+                Throws.ArgumentException);
         }
+        [Test]
+
+        public void CustomerType_CreateCustomerLessThan100_ReturnBasicCustomer()
+        {
+            customer.OrderTotal = 20;
+            var result = customer.GetCustomerdetails();
+            Assert.That(result, Is.TypeOf<BasicCustomer>());
+        }
+        [Test]
+        public void CustomerType_CreateCustomerGreaterThan100_ReturnPlatinumCustomer()
+        {
+            customer.OrderTotal = 120;
+            var result = customer.GetCustomerdetails();
+            Assert.That(result, Is.TypeOf<PlatinumCustomer>());
+        }
+
     }
 }
